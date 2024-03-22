@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "bruteforcefindmatch"
+version = "0.1.0"
+description = ""
+authors = ["Bram Devlaminck <bram.devlaminck@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+tqdm = "^4.66.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
