@@ -1,5 +1,5 @@
 import json
-import re
+import regex as re
 from tqdm import tqdm
 
 
@@ -24,7 +24,7 @@ def search_file(proteins: list[tuple[str, str]], peptide_file: str, output_file:
 
             accessions = []
             for accession_nr, sequence in proteins:
-                for _ in re.findall(search_peptide, sequence):
+                for _ in re.findall(search_peptide, sequence, overlapped=True):
                     accessions.append(accession_nr)
 
             results["result"].append({

@@ -8,6 +8,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 tqdm = "^4.66.2"
+regex = "^2023.12.25"
 
 
 [build-system]
