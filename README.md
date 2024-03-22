@@ -6,5 +6,5 @@ Simple python script to find all the bruteforce matches, and to compare the resu
 This repository is built using Poetry.
 Initialize the venv by running:
 ```sh
-poetry install
+poetry install --no-root
 ```
