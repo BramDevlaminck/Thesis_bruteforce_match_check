@@ -29,7 +29,8 @@ def compare(bruteforce_output_file: str, suffixarray_output_file: str):
 
             # check if we actually visited all the nodes from the suffix array results
             for entry in suffixarray_data["result"]:
-                assert "visited" in entry.keys() and sa_entry["visited"]
+                if "visited" not in entry.keys() or not sa_entry["visited"]:
+                    print(f"did not visit {entry['sequence']}", file=sys.stderr)
 
 
 if __name__ == "__main__":

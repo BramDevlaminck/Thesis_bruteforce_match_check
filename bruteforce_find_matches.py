@@ -17,10 +17,10 @@ def search_file(proteins: list[tuple[str, str]], peptide_file: str, output_file:
     results = {"result": []}
     with open(peptide_file) as fp:
         for peptide in tqdm(fp):
-            peptide = peptide.rstrip().upper()
-            search_peptide = peptide[::]
+            peptide = peptide.rstrip("\n").upper()
+            search_peptide = peptide
             if equalize_i_and_l:
-                re.sub("[IL]", "[IL]", search_peptide)
+                search_peptide = re.sub("[IL]", "[IL]", search_peptide)
 
             accessions = []
             for accession_nr, sequence in proteins:
